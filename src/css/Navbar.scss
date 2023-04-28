@@ -36,6 +36,10 @@
     letter-spacing: 2px;
 }
 
+.searchbar:focus {
+    outline: transparent;
+}
+
 .searchbar-btn {
     border-radius: 0 100px 100px 0;
     height: 40px;
@@ -58,7 +62,7 @@
 }
 
 .navbar-icons {
-    color: rgb(41, 165, 226);
+    color: #29a5e2;
 }
 
 .icon-user:hover {

@@ -20,7 +20,7 @@ function Navbar() {
                     <img src={logo} alt='website-logo' className='navbar-logo'/>
                 </div>
                 <div>
-                    <form className='inline'>
+                    <form className='inline searchbar-container'>
                         <input type='search' placeholder='Rechercher un produit, une marque...' className='searchbar' />
                         <button className='searchbar-btn'><CiSearch size={25} color='white' /></button>
                     </form>
