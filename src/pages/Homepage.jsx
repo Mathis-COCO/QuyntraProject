@@ -12,6 +12,7 @@ import dunkImage from '../img/dunk.jpg';
 import jeans from '../img/jeans.jpg'
 import sports from '../img/sports.jpg'
 import SeeAllCard from '../components/cards/SeeAllCard';
+import Jordan from '../img/Jordan.jpg'
 
 function Homepage() {
     const json = fakedb;
@@ -28,22 +29,25 @@ function Homepage() {
                         <div className='card-grid-2x2'>
                             <CategoryCard cat_image={teeShirtImage} cat_name='tee-shirts'/>
                             <CategoryCard cat_image={dunkImage} cat_name='sneakers'/>
-                            <SeeAllCard cat_image={jeans} cat_name='Voir toutes les catégories' />
+                            <SeeAllCard cat_image={jeans} cat_name='voir toutes les catégories' />
                             <CategoryCard cat_image={jeans} cat_name='pantalons'/>               
                             <CategoryCard cat_image={sports} cat_name='sport'/>               
                         </div>
-                        <div className='see-all-grid'>
-                            
-                        </div>                        
                     </div>
-
                 </div>
-
                 <h1 className='text1'>Marques Tendance</h1>
                 <h2 className='text2'>Les marques les plus prisées en ce moment</h2>
+                <div className='card-grid-container'>
+                    <div className='inline flex-center'>
+                        <div className='card-grid-2x2'>
+                            <CategoryCard cat_image={Jordan} cat_name='Jordan'/>
+                            <CategoryCard cat_image={dunkImage} cat_name='Stüssy'/>
+                            <CategoryCard cat_image={dunkImage} cat_name='Nike'/>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
     );
 }
 
