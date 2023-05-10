@@ -9,9 +9,11 @@ import RegisterCard from '../components/cards/login-register/RegisterCard';
 
 function LoginRegister() {
 
-    const [loginOpacity, setLoginOpacity] = useState('1');
+    const [logRegBtnOpacity, setLogRegBtnOpacity] = useState(1);
     const [logoMargin, setLogoMargin] = useState('0px');
     const [duneMargin, setDuneMargin] = useState('0px');
+    const [loginOpacity, setLoginOpacity] = useState(0);
+    const [registerOpacity, setRegisterOpacity] = useState(0);
     const styles = {
         sun: {
             marginTop: logoMargin,
@@ -22,14 +24,34 @@ function LoginRegister() {
             transition: 'all 2.5s cubic-bezier(0.61, 0.13, 0.98, 0.98) 0.5s',
         },
         log_reg_btn: {
-            opacity: loginOpacity,
+            opacity: logRegBtnOpacity,
             transition: 'opacity 1s ease 0s',
-        }
+        },
+        login: {
+            zIndex: 100,
+            opacity: loginOpacity,
+            transition: 'opacity 1.5s linear 2.5s',
+        },
+        register: {
+            zIndex: 100,
+            opacity: registerOpacity,
+            transition: 'opacity 1.5s linear 2.5s',
+        },
     }
 
     function login() {
         setLogoMargin('100vh');
         setDuneMargin('50vh');
+        setLogRegBtnOpacity(0);
+        setLoginOpacity(1);
+        setRegisterOpacity(0);
+    }
+
+    function register() {
+        setLogoMargin('100vh');
+        setDuneMargin('50vh');
+        setLogRegBtnOpacity(0);
+        setRegisterOpacity(1);
         setLoginOpacity(0);
     }
 
@@ -37,23 +59,19 @@ function LoginRegister() {
         <div className='log-reg-container'>
             <Navbar />
             <div className='log-reg-main'>
-                <div>
-                    <div className='login-container'>
-                        <LoginCard />
-                    </div>
-                    <div className='register-container'>
-                        <RegisterCard />
-                    </div>
+                <div className='container'>
+                    <LoginCard styles={styles.login} />
+                    <RegisterCard styles={styles.register} />
                 </div>
                 <div>
                     <img src={require('../img/styling/dune3.jpg')} className='log-reg-bg' style={styles.dunebg} />
                     <img src={require('../img/styling/overlay-1.png')} className='dune' style={styles.dunebg} />
                     <img src={require('../img/styling/overlay-2.png')} className='sun' style={styles.sun} />
                 </div>
-                <div className='index-100'>
+                <div className='index-10'>
                     <div className='btn-container'>
                         <button className='login-btn log-reg-btn' onClick={login} style={styles.log_reg_btn}>connexion</button>
-                        <button className='register-btn log-reg-btn' style={styles.log_reg_btn}>inscription</button>                        
+                        <button className='register-btn log-reg-btn' onClick={register} style={styles.log_reg_btn}>inscription</button>                        
                     </div>
 
                 </div>
