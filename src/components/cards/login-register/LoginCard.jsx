@@ -1,19 +1,21 @@
 import React from "react";
-import '../../css/Card.scss';
+import '../../../css/Card.scss';
 
-const CategoryCard = (props) => {
-    const { cat_name, cat_image } = props;
+const LoginCard = () => {
 
     return (
-        <div className='card category-card'>
-            <div className='card-cat-img'>
-                <img src={cat_image} alt='category image' className='card-cat-img' />
+        <div className='card'>
+            <div>
+                <input type='email' name='' placeholder='email' />
             </div>
             <div>
-                <p className='card-cat-name'>{cat_name}</p>
-            </div>         
+                <input type='password' name='' placeholder='mot de passe' />
+            </div>
+            <div>
+                <button type='submit'></button>
+            </div>
         </div>
     )
 }
 
-export default CategoryCard;
+export default LoginCard;

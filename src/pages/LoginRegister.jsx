@@ -4,6 +4,8 @@
 import {React, useState} from 'react';
 import '../css/LoginRegister.scss';
 import Navbar from '../components/Navbar';
+import LoginCard from '../components/cards/login-register/LoginCard';
+import RegisterCard from '../components/cards/login-register/RegisterCard';
 
 function LoginRegister() {
 
@@ -37,10 +39,10 @@ function LoginRegister() {
             <div className='log-reg-main'>
                 <div>
                     <div className='login-container'>
-                        aaaaaa
+                        <LoginCard />
                     </div>
                     <div className='register-container'>
-                        aaaaaa
+                        <RegisterCard />
                     </div>
                 </div>
                 <div>
