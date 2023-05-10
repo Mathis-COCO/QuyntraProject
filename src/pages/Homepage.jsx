@@ -8,11 +8,14 @@ import ProductCard from '../components/cards/ProductCard';
 import CategoryCard from '../components/cards/CategoryCard';
 import fakedb from '../db/FakeDb.json'
 import teeShirtImage from '../img/supreme-tee.jpg';
-import dunkImage from '../img/dunk.jpg';
-import jeans from '../img/jeans.jpg'
+import dunk from '../img/nike/dunk.jpg';
+import jeans from '../img/clothes/pants1.jpg'
+import pants from '../img/clothes/pants2.png'
 import sports from '../img/sports.jpg'
 import SeeAllCard from '../components/cards/SeeAllCard';
 import Jordan from '../img/Jordan.jpg'
+import Stussy from '../img/stussy/stussy4.jpg'
+import Nike from '../img/nike/air-max.jpg'
 
 function Homepage() {
     const json = fakedb;
@@ -28,9 +31,9 @@ function Homepage() {
                     <div className='inline flex-center'>
                         <div className='card-grid-2x2'>
                             <CategoryCard cat_image={teeShirtImage} cat_name='tee-shirts'/>
-                            <CategoryCard cat_image={dunkImage} cat_name='sneakers'/>
+                            <CategoryCard cat_image={dunk} cat_name='sneakers'/>
                             <SeeAllCard cat_image={jeans} cat_name='voir toutes les catégories' />
-                            <CategoryCard cat_image={jeans} cat_name='pantalons'/>               
+                            <CategoryCard cat_image={pants} cat_name='pantalons'/>               
                             <CategoryCard cat_image={sports} cat_name='sport'/>               
                         </div>
                     </div>
@@ -41,8 +44,8 @@ function Homepage() {
                     <div className='inline flex-center'>
                         <div className='card-grid-2x2'>
                             <CategoryCard cat_image={Jordan} cat_name='Jordan'/>
-                            <CategoryCard cat_image={dunkImage} cat_name='Stüssy'/>
-                            <CategoryCard cat_image={dunkImage} cat_name='Nike'/>
+                            <CategoryCard cat_image={Stussy} cat_name='Stüssy'/>
+                            <CategoryCard cat_image={Nike} cat_name='Nike'/>
                         </div>
                     </div>
                 </div>

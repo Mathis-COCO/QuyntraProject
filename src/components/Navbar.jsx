@@ -7,18 +7,17 @@ import {React} from 'react';
 import '../css/Navbar.scss';
 import {BiUser} from 'react-icons/bi';
 import {AiOutlineHeart, AiOutlineShoppingCart} from 'react-icons/ai';
-import {RxHamburgerMenu} from 'react-icons/rx';
 import {CiSearch} from 'react-icons/ci';
 import logo from '../img/quyntra-logo-blue.png'
+import { Link } from 'react-router-dom';
 
 function Navbar() {
-
     return (
         <div className='navbar-c-main'>
             <div className='navbar-container'>
-                <div>
+                <Link to={'/'}>
                     <img src={logo} alt='website-logo' className='navbar-logo'/>
-                </div>
+                </Link>
                 <div>
                     <form className='inline searchbar-container'>
                         <input type='search' placeholder='Rechercher un produit, une marque...' className='searchbar' />
@@ -26,7 +25,7 @@ function Navbar() {
                     </form>
                 </div>
                 <div className='inline-sep icon-container'>
-                    <BiUser size={32} stroke-width='0.1' className='navbar-icons icon-user' />
+                    <Link to={'/connexion'}><BiUser size={32} stroke-width='0.1' className='navbar-icons icon-user' /></Link>
                     <AiOutlineHeart size={32} stroke-width='0.1' className='navbar-icons icon-fav' />
                     <AiOutlineShoppingCart size={32} stroke-width='0.1' className='navbar-icons icon-cart' />
                 </div>
