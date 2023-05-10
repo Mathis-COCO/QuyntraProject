@@ -45,6 +45,7 @@ function LoginRegister() {
         setLogRegBtnOpacity(0);
         setLoginOpacity([1, 100]);
         setRegisterOpacity([0, 0]);
+        window.history.pushState(null, null, '/login');
     }
 
     function register() {
@@ -53,6 +54,7 @@ function LoginRegister() {
         setLogRegBtnOpacity(0);
         setRegisterOpacity([1, 100]);
         setLoginOpacity([0, 0]);
+        window.history.pushState(null, null, '/register');
     }
 
     return (
@@ -73,7 +75,6 @@ function LoginRegister() {
                         <button className='login-btn log-reg-btn' onClick={login} style={styles.log_reg_btn}>connexion</button>
                         <button className='register-btn log-reg-btn' onClick={register} style={styles.log_reg_btn}>inscription</button>                        
                     </div>
-
                 </div>
             </div>
         </div>

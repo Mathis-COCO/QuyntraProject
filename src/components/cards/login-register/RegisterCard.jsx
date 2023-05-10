@@ -3,6 +3,10 @@ import '../../../css/Card.scss';
 
 const RegisterCard = (props) => {
     const styles = props.styles;
+    function BackToConnexion() {
+        window.history.pushState(null, null, '/connexion');
+        window.location.reload(false);
+    }
     return (
         <div className='log-reg-card register-card' style={styles}>
             <p className='log-reg-card-txt'>inscription</p>
@@ -27,6 +31,7 @@ const RegisterCard = (props) => {
                 </div>
                 <div>
                     <button type='submit' className='log-reg-btn log-reg-card-btn'>s'inscrire</button>
+                    <p className='switch-card-btn' onClick={BackToConnexion}>déjà un compte ? se connecter</p>
                 </div>
             </ form>
         </div>
