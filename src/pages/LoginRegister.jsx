@@ -12,8 +12,8 @@ function LoginRegister() {
     const [logRegBtnOpacity, setLogRegBtnOpacity] = useState(1);
     const [logoMargin, setLogoMargin] = useState('0px');
     const [duneMargin, setDuneMargin] = useState('0px');
-    const [loginOpacity, setLoginOpacity] = useState(0);
-    const [registerOpacity, setRegisterOpacity] = useState(0);
+    const [loginOpacity, setLoginOpacity] = useState([0, 0]);
+    const [registerOpacity, setRegisterOpacity] = useState([0, 0]);
     const styles = {
         sun: {
             marginTop: logoMargin,
@@ -28,13 +28,13 @@ function LoginRegister() {
             transition: 'opacity 1s ease 0s',
         },
         login: {
-            zIndex: 100,
-            opacity: loginOpacity,
+            zIndex: loginOpacity[1],
+            opacity: loginOpacity[0],
             transition: 'opacity 1.5s linear 2.5s',
         },
         register: {
-            zIndex: 100,
-            opacity: registerOpacity,
+            zIndex: registerOpacity[1],
+            opacity: registerOpacity[0],
             transition: 'opacity 1.5s linear 2.5s',
         },
     }
@@ -43,16 +43,16 @@ function LoginRegister() {
         setLogoMargin('100vh');
         setDuneMargin('50vh');
         setLogRegBtnOpacity(0);
-        setLoginOpacity(1);
-        setRegisterOpacity(0);
+        setLoginOpacity([1, 100]);
+        setRegisterOpacity([0, 0]);
     }
 
     function register() {
         setLogoMargin('100vh');
         setDuneMargin('50vh');
         setLogRegBtnOpacity(0);
-        setRegisterOpacity(1);
-        setLoginOpacity(0);
+        setRegisterOpacity([1, 100]);
+        setLoginOpacity([0, 0]);
     }
 
     return (

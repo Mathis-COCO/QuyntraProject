@@ -34,10 +34,12 @@
     padding: 0 0 0 25px;
     font-weight: 300;
     letter-spacing: 2px;
+    color: grey;
 }
 
 .searchbar:focus {
-    outline: transparent;
+    outline: none !important;
+    color: grey;
 }
 
 .searchbar-btn {
