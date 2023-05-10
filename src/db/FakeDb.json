@@ -1,0 +1,61 @@
+{
+    "categories": [
+        {
+            "name": "Sneakers",
+            "brands": {
+                "1": "Nike",
+                "2": "Adidas",
+                "3": "Reebok",
+                "4": "Puma",
+                "5": "New Balance",
+                "6": "Jordan"
+            }
+        },
+        {
+            "name": "tee-shirts",
+            "brands": {
+                "1": "Nike",
+                "2": "Adidas",
+                "3": "Lacoste",
+                "4": "Supreme",
+                "5": "Balanciaga",
+                "6": "Helas",
+                "7": "RalphLauren"
+            }
+        },
+        {
+            "name": "pantalons",
+            "brands": {
+                "1": "Nike",
+                "2": "Adidas",
+                "3": "Levis",
+                "4": "True Religion",
+                "5": "Balanciaga",
+                "6": "Supreme",
+                "7": "G-Star"
+            }
+        },
+        {
+            "name": "Sport",
+            "brands": {
+                "1": "Nike",
+                "2": "Adidas",
+                "3": "Puma",
+                "4": "Reebok",
+                "5": "Gymshark",
+                "6": "Under Armor"
+            }
+        },
+        {
+            "name": "Accessoires",
+            "brands": {
+                "1": "Nike",
+                "2": "Adidas",
+                "3": "Supreme",
+                "4": "Balenciaga",
+                "5": "Gymshark",
+                "6": "Under Armor"
+            }
+        }
+    ]
+}

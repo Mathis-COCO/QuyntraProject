@@ -5,3 +5,30 @@ body {
 p {
     height: 7000px;
 }
+
+.inline {
+    display: flex;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.text1 {
+    margin: 80px 0 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.text2 {
+    margin: -40px 0 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    letter-spacing: 3px;
+    font-size: 15px;
+}
+
+.main-div {
+    padding: 0 15vw 0 15vw;
+}
