@@ -7,23 +7,23 @@ import Navbar from '../../components/Navbar';
 import LoginCard from '../../components/cards/login-register/LoginCard';
 
 function Login() {
-    let imageLoaded = false;
+    const [imageLoaded, setImageLoaded] = useState(false);
     const [logoMargin, setLogoMargin] = useState('0px');
     const [duneMargin, setDuneMargin] = useState('0px');
     const [loginOpacity, setLoginOpacity] = useState([0, 0]);
     const styles = {
         sun: {
             marginTop: logoMargin,
-            transition: 'all 2.5s cubic-bezier(0.61, 0.13, 0.98, 0.98) 0s',
+            transition: 'all 2.5s cubic-bezier(0.61, 0.13, 0.98, 0.98) 1.2s',
         },
         dunebg: {
             marginTop: duneMargin,
-            transition: 'all 2.5s cubic-bezier(0.61, 0.13, 0.98, 0.98) 0.5s',
+            transition: 'all 2.5s cubic-bezier(0.61, 0.13, 0.98, 0.98) 1.7s',
         },
         login: {
             zIndex: loginOpacity[1],
             opacity: loginOpacity[0],
-            transition: 'opacity 1.5s linear 2.5s',
+            transition: 'opacity 1.5s linear 3.2s',
         },
     }
 
@@ -31,7 +31,7 @@ function Login() {
         const img = new Image();
         img.src = '../../img/styling/dune3.jpg';
         img.onload = () => {
-            imageLoaded = true;
+            setImageLoaded(true);
         }
         setLogoMargin('100vh');
         setDuneMargin('50vh');
@@ -40,7 +40,7 @@ function Login() {
 
     useEffect (() => {
         login();
-    });
+    }, []);
     
     return !imageLoaded ? (
         <div className='log-reg-container'>

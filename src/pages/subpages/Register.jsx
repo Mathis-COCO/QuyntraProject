@@ -7,27 +7,32 @@ import Navbar from '../../components/Navbar';
 import RegisterCard from '../../components/cards/login-register/RegisterCard';
 
 function Register() {
-
+    const [imageLoaded, setImageLoaded] = useState(false);
     const [logoMargin, setLogoMargin] = useState('0px');
     const [duneMargin, setDuneMargin] = useState('0px');
     const [registerOpacity, setRegisterOpacity] = useState([0, 0]);
     const styles = {
         sun: {
             marginTop: logoMargin,
-            transition: 'all 2.5s cubic-bezier(0.61, 0.13, 0.98, 0.98) 0s',
+            transition: 'all 2.5s cubic-bezier(0.61, 0.13, 0.98, 0.98) 1.2s',
         },
         dunebg: {
             marginTop: duneMargin,
-            transition: 'all 2.5s cubic-bezier(0.61, 0.13, 0.98, 0.98) 0.5s',
+            transition: 'all 2.5s cubic-bezier(0.61, 0.13, 0.98, 0.98) 1.7s',
         },
         register: {
             zIndex: registerOpacity[1],
             opacity: registerOpacity[0],
-            transition: 'opacity 1.5s linear 2.5s',
+            transition: 'opacity 1.5s linear 3.2s',
         },
     }
 
     function register() {
+        const img = new Image();
+        img.src = '../../img/styling/dune3.jpg';
+        img.onload = () => {
+            setImageLoaded(true);
+        }
         setLogoMargin('100vh');
         setDuneMargin('50vh');
         setRegisterOpacity([1, 100]);
@@ -35,9 +40,9 @@ function Register() {
 
     useEffect (() => {
         register();
-    });
-
-    return (
+    }, []);
+    
+    return !imageLoaded ? (
         <div className='log-reg-container'>
             <Navbar />
             <div className='log-reg-main'>
@@ -51,7 +56,7 @@ function Register() {
                 </div>
             </div>
         </div>
-    );
+    ): <p>page en cours de chargement...</p>
 }
 
 export default Register;
