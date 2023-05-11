@@ -1,12 +1,9 @@
 import React from "react";
 import '../../../css/Card.scss';
+import { Link } from "react-router-dom";
 
 const LoginCard = (props) => {
     const styles = props.styles;
-    function BackToConnexion() {
-        window.history.pushState(null, null, '/connexion');
-        window.location.reload(false);
-    }
     return (
         <div className='log-reg-card login-card' style={styles}>
             <p className='log-reg-card-txt'>connexion</p>
@@ -19,7 +16,7 @@ const LoginCard = (props) => {
                 </div>
                 <div>
                     <button className='log-reg-btn log-reg-card-btn' type='submit'>connexion</button>
-                    <p className='switch-card-btn' onClick={BackToConnexion}>pas de compte ? s'inscrire</p>
+                    <Link to={'/register'} className='switch-card-btn'>pas de compte ? s'inscrire</Link>
                 </div>                
             </form>
 

@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import '../../../css/Card.scss';
+import { Link } from "react-router-dom";
 
 const RegisterCard = (props) => {
     const styles = props.styles;
-    function BackToConnexion() {
-        window.history.pushState(null, null, '/connexion');
-        window.location.reload(false);
+    const [isChecked, setIsChecked] = useState(false);
+
+    const handleChange = () => {
+      setIsChecked(!isChecked);
     }
+  
+    const className = isChecked ? 'cgu-green' : 'cgu-red';
     return (
         <div className='log-reg-card register-card' style={styles}>
             <p className='log-reg-card-txt'>inscription</p>
@@ -25,13 +29,13 @@ const RegisterCard = (props) => {
                     <input type='password' name='' placeholder='mot de passe' className='log-reg-halfinput' />
                     <input type='password' name='' placeholder='confirmer le mot de passe' className='log-reg-halfinput' />
                 </div>
-                <div>
-                    <p>Vous confirmez avoir lu et accepté nos CGU</p>
-                    <input type='checkbox' />
+                <div className='inline'>
+                    <input type='checkbox' onChange={handleChange} className='log-reg-checkbox' />
+                    <p className={className}>Vous confirmez avoir lu et accepté nos CGU</p>
                 </div>
                 <div>
                     <button type='submit' className='log-reg-btn log-reg-card-btn'>s'inscrire</button>
-                    <p className='switch-card-btn' onClick={BackToConnexion}>déjà un compte ? se connecter</p>
+                    <Link to={'/login'} className='switch-card-btn'>déjà un compte ? se connecter</Link>
                 </div>
             </ form>
         </div>
