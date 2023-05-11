@@ -9,6 +9,7 @@ import {BiUser} from 'react-icons/bi';
 import {AiOutlineHeart, AiOutlineShoppingCart} from 'react-icons/ai';
 import {CiSearch} from 'react-icons/ci';
 import logo from '../img/quyntra-logo-blue.png'
+import logo_pink from '../img/quyntra-logo-pink.png'
 import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
@@ -18,21 +19,30 @@ function Navbar() {
     return (
         <div className='navbar-c-main'>
             <div className='navbar-container'>
+                { location.pathname !== '/register' && location.pathname !== '/login' && location.pathname !== '/connexion' ? (
+                    <div>
+                        <Link to={'/'}>
+                            <img src={logo} alt='website-logo' className='navbar-logo'/>
+                        </Link>
+                    </div>
+                ):
                 <Link to={'/'}>
-                    <img src={logo} alt='website-logo' className='navbar-logo'/>
-                </Link>
-                { location.pathname !== '/register' || '/login' ? (
+                    <img src={logo_pink} alt='website-logo' className='navbar-logo'/>
+                </Link> 
+                }
+
+                { location.pathname !== '/register' && location.pathname !== '/login' && location.pathname !== '/connexion' ? (
                     <div>
                         <form className='inline searchbar-container'>
                             <input type='search' placeholder='Rechercher un produit, une marque...' className='searchbar' />
                             <button className='searchbar-btn'><CiSearch size={25} color='white' /></button>
-                        </form>
+                        </form>                   
                     </div>
-                ): null }
+                ):null }
                 <div className='inline-sep icon-container'>
                     <Link to={'/connexion'}><BiUser size={32} stroke-width='0.1' className='navbar-icons icon-user' style={styles.itemscolor} /></Link>
-                    <AiOutlineHeart size={32} stroke-width='0.1' className='navbar-icons icon-fav' />
-                    <AiOutlineShoppingCart size={32} stroke-width='0.1' className='navbar-icons icon-cart' />
+                    <AiOutlineHeart size={32} stroke-width='0.1' className='navbar-icons icon-fav' style={styles.itemscolor} />
+                    <AiOutlineShoppingCart size={32} stroke-width='0.1' className='navbar-icons icon-cart' style={styles.itemscolor} />
                 </div>
             </div>
         </div>
