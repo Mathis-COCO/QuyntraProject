@@ -1,3 +1,7 @@
+.product-page-1 {
+    height: calc(100vh - 40px);
+}
+
 .product-page-title {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 500;
@@ -12,15 +16,29 @@
     margin-bottom: 75px;
 }
 
+.slider-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 33vw;
+    height: 500px;
+}
+
 .product-img-slider {
-    height: 450px;
-    width: 30vw;
     border-radius: 25px;
+    flex-shrink: 0;
+    max-width: 33vw;
+    max-height: 500px
 }
 
 .product-purchase-details {
-    width: 25vw;
+    width: 30vw;
     height: 450px;
+}
+
+.reviews {
+    margin: 30px 0 50px 0;
 }
 
 .sizes-box {
@@ -33,22 +51,22 @@
     font-family: sans-serif;
     font-weight: 200;
     letter-spacing: 2px;
-    margin: 25px 0 40px 0;
+    margin: 25px 0 60px 0;
 }
 
 .prices-box {
     padding-right: 200px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
 }
 
 .item-price {
     color: green;
     font-weight: 500;
-    font-size: 20px;
+    margin: 0;
 }
 
 .item-price-diff {
-    font-size: 20px;
     font-weight: 600;
     margin: 0 0 0 10px;
     color: rgb(159, 0, 0);
@@ -59,6 +77,7 @@
 }
 
 .add-to-cart {
+    margin-top: 50px;
     background-color: green;
     width: 100%;
     height: 50px;
@@ -77,4 +96,69 @@
 
 .stars-txt {
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.product-details-1 {
+    justify-content: space-between;
+}
+
+.product-detailed-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 54vw;
+    max-height: 800px;
+}
+
+.detailed-img-1 {
+    background-image: url('../img/chateau_rouge/jordan1_MCR2.jpg');
+}
+
+.detailed-img-2 {
+    background-image: url('../img/chateau_rouge/jordan1_MCR3.jpg');
+}
+
+.product-detailed-infos {
+    max-width: 40vw;
+}
+
+.product-details-1 {
+    height: 800px;
+}
+
+.product-detailed-card {
+    padding: 7.5vw;
+}
+
+.more-details {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 17.5px;
+    margin: 0 20px 0 20px;
+    text-transform: uppercase;
+}
+
+.more-details-div {
+    color: rgb(0, 153, 255);
+    display: flex;
+    justify-content: center;    
+    padding: 15vh;
+}
+
+.details-product-brand {
+    color: rgb(0, 123, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.2vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 75px;
+}
+
+.details-product-txt {
+    color: rgb(85, 85, 85);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 30px;
 }
