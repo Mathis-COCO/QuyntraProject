@@ -6,14 +6,14 @@ const ProductCard = (props) => {
     console.log(item_sizes);
 
     return (
-        <div className='product-card'>
-            <div className='card-img'>
-                {item_image && <img src={item_image} alt='product-image' />}
+        <div className='card product-card'>
+            <div className='product-card-img'>
+                {item_image && <img src={item_image} alt='product-image' className='product-card-image' />}
             </div>
-            <div>
-                <p>{item_name}</p>
-                <p>tailles : {item_sizes}</p>
-                <p>{item_price}€</p>
+            <div className='product-card-txt'>
+                <p className='product-card-name'>{item_name}</p>
+                <p className='product-card-sizes'>tailles : {item_sizes}</p>
+                <p className='item-price'>{item_price}</p>
             </div>         
         </div>
     )

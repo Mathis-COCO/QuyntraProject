@@ -51,12 +51,15 @@ function Navbar() {
                             <button className='searchbar-btn'><CiSearch size={25} color='white' /></button>
                         </form>                   
                     </div>
+                    
                 ):null }
-                <div className='inline-sep icon-container'>
-                    <Link to={'/connexion'}><BiUser size={32} stroke-width='0.1' className='navbar-icons icon-user' style={styles.itemscolor} /></Link>
-                    <AiOutlineHeart size={32} stroke-width='0.1' className='navbar-icons icon-fav' style={styles.itemscolor} />
-                    <AiOutlineShoppingCart onClick={ShowCart} size={32} stroke-width='0.1' className='navbar-icons icon-cart' style={styles.itemscolor} />
-                </div>
+                { location.pathname !== '/register' && location.pathname !== '/login' && location.pathname !== '/connexion' ? (
+                    <div className='inline-sep icon-container'>
+                        <Link to={'/connexion'}><BiUser size={32} stroke-width='0.1' className='navbar-icons icon-user' style={styles.itemscolor} /></Link>
+                        <AiOutlineHeart size={32} stroke-width='0.1' className='navbar-icons icon-fav' style={styles.itemscolor} />
+                        <AiOutlineShoppingCart onClick={ShowCart} size={32} stroke-width='0.1' className='navbar-icons icon-cart' style={styles.itemscolor} />
+                    </div>
+                ):null }
             </div>
             { showCart === true ? (
                 <div className='cart-popup'>

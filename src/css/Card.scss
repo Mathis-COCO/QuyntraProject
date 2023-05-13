@@ -6,9 +6,14 @@
 }
 
 .product-card {
-    height: 20vh;
-    width: 20%;
-    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 35vh;
+    width: 20vw;
+}
+
+.product-card-img {
+    height: 24vh;
+    width: 100%;
 }
 
 .category-card {
@@ -69,4 +74,19 @@
 .card-see-all-img {
     width: 100%;
     height: 517px;
+}
+
+.product-card-image {
+    height: 100%;
+    width: 100%;
+}
+
+.product-card-sizes {
+    font-weight: 300;
+    color: grey;
+    font-size: 15px;
+}
+
+.product-card-txt {
+    margin: 25px;
 }
