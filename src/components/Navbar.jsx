@@ -2,14 +2,13 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable arrow-parens */
 /* eslint-disable indent */
-import {React, useEffect, useState} from 'react';
-// import {useLocation, useNavigate} from 'react-router-dom';
+import {React, useState} from 'react';
 import '../css/Navbar.scss';
 import {BiUser} from 'react-icons/bi';
 import {AiOutlineHeart, AiOutlineShoppingCart} from 'react-icons/ai';
 import {CiSearch} from 'react-icons/ci';
-import logo from '../img/quyntra-logo-blue.png'
-import logo_pink from '../img/quyntra-logo-pink.png'
+import logo from '../img/styling/quyntra-logo-blue.png'
+import logo_pink from '../img/styling/quyntra-logo-pink.png'
 import { Link, useLocation } from 'react-router-dom';
 import imgCard1 from '../img/chateau_rouge/Jordan1_MCR_cart.png'
 import imgCard2 from '../img/nike/dunk_jarritos.jpg'

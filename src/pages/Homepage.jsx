@@ -4,16 +4,15 @@
 import {React} from 'react';
 import '../css/Homepage.scss';
 import Navbar from '../components/Navbar';
-import ProductCard from '../components/cards/ProductCard';
 import CategoryCard from '../components/cards/CategoryCard';
 import fakedb from '../db/FakeDb.json'
-import teeShirtImage from '../img/supreme-tee.jpg';
+import teeShirtImage from '../img/clothes/supreme-tee.jpg';
 import dunk from '../img/nike/dunk.jpg';
 import jeans from '../img/clothes/pants1.jpg'
 import pants from '../img/clothes/pants2.png'
-import sports from '../img/sports.jpg'
+import sports from '../img/clothes/sports.jpg'
 import SeeAllCard from '../components/cards/SeeAllCard';
-import Jordan from '../img/Jordan.jpg'
+import Jordan from '../img/Jordan/Jordan.jpg'
 import Stussy from '../img/stussy/stussy4.jpg'
 import Nike from '../img/nike/air-max.jpg'
 

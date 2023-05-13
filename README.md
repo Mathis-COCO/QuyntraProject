@@ -1,3 +1,29 @@
+# Quyntra - Site de vente de sneakers, habits et accessoires
+
+## Project in pictures:
+---
+
+## Homepage :
+![Homepage Image](./src/img/project/1.png)
+
+## Login / Register
+
+![Login Register Image](./src/img/project/2.png)
+
+## Category Page
+
+![Category Image](./src/img/project/3.png)
+
+## Product Page
+
+![Product Image](./src/img/project/4.png)
+
+## Cart Popup
+
+![Cart Popup](./src/img/project/5.png)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
