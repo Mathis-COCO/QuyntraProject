@@ -5,6 +5,7 @@ import Homepage from './pages/Homepage.jsx';
 import LoginRegister from './pages/LoginRegister.jsx';
 import Login from './pages/subpages/Login.jsx';
 import Register from './pages/subpages/Register.jsx';
+import ProductPage from './pages/ProductPage.jsx';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path='/connexion' element={<LoginRegister />}/>
           <Route path='/login' element={<Login />}/>
           <Route path='/register' element={<Register />}/>
+          <Route path='/product' element={<ProductPage />}/>
         </Routes>
       </Router>
   );
