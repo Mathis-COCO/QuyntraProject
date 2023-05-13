@@ -78,7 +78,7 @@ function ProductPage() {
                     <div className='product-detailed-img detailed-img-1'></div>
                 </div>
             </div>
-            <div>
+            <div className='product-details-3'>
                 <div className='inline product-details-1'>
                     <div className='product-detailed-img detailed-img-2'></div>
                     <div>
