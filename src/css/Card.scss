@@ -7,7 +7,7 @@
 
 .product-card {
     font-family: Arial, Helvetica, sans-serif;
-    height: 35vh;
+    max-height: 450px;
     width: 20vw;
 }
 
@@ -44,11 +44,11 @@
 .card-grid {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    justify-content: flex-start;
+    gap: 3.5vw
 }
 
 .card-grid::after {
-  content: "";
   display: table;
   clear: both;
 }
@@ -79,6 +79,7 @@
 .product-card-image {
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .product-card-sizes {
@@ -89,4 +90,10 @@
 
 .product-card-txt {
     margin: 25px;
+    text-decoration: none;
+}
+
+.card-link {
+    text-decoration: none;
+    color: black;
 }
